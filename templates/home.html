@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <script src="{{ url_for('static',filename='scripts/default.js') }}" ></script>
+</head>
+<body>
+
+<nav>
+<div class="topnav">
+  <a class= first href="#home"><span id = "logo">JustStreamIt</span></a>
+  <a href="#news">Accueil</a>
+  <a href="#contact">Catégorie</a>
+</div>
+</nav>
+
+<div class="contener">
+<section id = best_movie>
+    <div class = "best_movie_background">
+         <div id = "best_movie_text" class = "inline">
+             <span hidden></span>
+             <p id ="title"></p>
+           <button id ="play" class="button button5">Play</button>
+           <p id ="description"></p>
+
+
+         </div>
+        <div id = "best_movie_image" class="inline ">
+            <img id = "best-film-img" src="">
+        </div>
+    </div>
+
+</section>
+
+<section id="best-note">
+    <h2> Films les mieux notés</h2>
+
+    <div class="wrapper">
+        {% for i in range(1,3) %}
+        <section id="section{{loop.index}}">
+            {% if i == 1%}
+            <a href="#section{{loop.index +1}}">‹</a>
+            {% for j in range(4) %}
+            <div class="item">
+                <span hidden></span>
+                <img src="">
+
+            </div>
+            {% endfor %}
+            <a href="#section{{loop.index +1}}">›</a>
+            {% else %}
+            <a href="#section{{loop.index -1}}">‹</a>
+            {% for j in range(3) %}
+            <div class="item">
+                <span hidden></span>
+                <img src="">
+
+            </div>
+            {% endfor %}
+            <a href="#section{{ loop.index -1}}">›</a>
+            {% endif %}
+        </section>
+
+            {% endfor %}
+
+
+    </div>
+
+</section>
+
+<section id = "crime">
+  <h2> Crime</h2>
+    <div class="wrapper">
+        {% for i in range(1,3) %}
+        <section id="crimesection{{loop.index}}">
+            {% if i == 1%}
+            <a href="#crimesection{{loop.index +1}}">‹</a>
+            {% for j in range(4) %}
+            <div class="item">
+                <span hidden></span>
+                <img src="">
+            </div>
+            {% endfor %}
+            <a href="#crimesection{{loop.index +1}}">›</a>
+            {% else %}
+            <a href="#crimesection{{loop.index -1}}">‹</a>
+            {% for j in range(3) %}
+            <div class="item">
+                <span hidden></span>
+                <img src="">
+            </div>
+            {% endfor %}
+            <a href="#crimesection{{loop.index -1}}">›</a>
+            {% endif %}
+        </section>
+
+            {% endfor %}
+         </div>
+</section>
+
+<section id = "action">
+  <h2> Action</h2>
+    <div class="wrapper">
+        {% for i in range(1,3) %}
+        <section id="actionsection{{loop.index}}">
+            {% if i == 1%}
+            <a href="#actionsection{{loop.index +1}}">‹</a>
+            {% for j in range(4) %}
+            <div class="item">
+                <span hidden></span>
+                <img src="">
+            </div>
+            {% endfor %}
+            <a href="#actionsection{{loop.index +1}}">›</a>
+            {% else %}
+            <a href="#actionsection{{loop.index -1}}">‹</a>
+            {% for j in range(3) %}
+            <div class="item">
+                <span hidden></span>
+                <img src="">
+            </div>
+            {% endfor %}
+            <a href="#actionsection{{loop.index -1}}">›</a>
+            {% endif %}
+        </section>
+
+            {% endfor %}
+         </div>
+</section>
+
+<section id = "drama">
+  <h2> Drama</h2>
+    <div class="wrapper">
+        {% for i in range(1,3) %}
+        <section id="dramasection{{loop.index}}">
+            {% if i == 1%}
+            <a href="#dramasection{{loop.index +1}}">‹</a>
+            {% for j in range(4) %}
+            <div class="item">
+                <span hidden></span>
+                <img src="">
+            </div>
+            {% endfor %}
+            <a href="#dramasection{{loop.index +1}}">›</a>
+            {% else %}
+            <a href="#dramasection{{loop.index -1}}">‹</a>
+            {% for j in range(3) %}
+            <div class="item">
+                <span hidden></span>
+                <img src="">
+            </div>
+            {% endfor %}
+            <a href="#dramasection{{loop.index -1}}">›</a>
+            {% endif %}
+        </section>
+
+            {% endfor %}
+         </div>
+</section>
+
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+      <span id="close">&times;</span>
+      <h1></h1>
+      <img src="">
+      <p>Genres: </p>
+      <p id = "p_genre"></p>
+      <p>Date de sortie: </p>
+      <p id = "p_out"></p>
+      <p>Rated: </p>
+      <p id = "p_rated"></p>
+      <p>Note: </p>
+      <p id = "p_note"></p>
+      <p>Réalisateur: </p>
+      <p id = "p_real"></p>
+      <p>Acteur: </p>
+      <p id = "p_acteur"></p>
+      <p>Durée: </p>
+      <p id = "p_duree"></p>
+      <p>Pays d'origine: </p>
+      <p id = "p_origine"></p>
+      <p>Résultat au Box Office: </p>
+      <p id = "p_box"></p>
+      <p>Résumé: </p>
+      <p id = "p_resume"></p>
+
+
+
+  </div>
+
+</div>
+
+</div>
+<script>
+
+</script>
+
+
+</body>
+</html>
+
