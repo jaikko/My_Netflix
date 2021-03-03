@@ -12,9 +12,9 @@
 
 <nav>
 <div class="topnav">
-  <a class= first href="#home"><span id = "logo">JustStreamIt</span></a>
-  <a href="#news">Accueil</a>
-  <a href="#contact">Catégorie</a>
+  <a class= first href="#"><span id = "logo">JustStreamIt</span></a>
+  <a href="#">Accueil</a>
+  <a href="#crime">Catégorie</a>
 </div>
 </nav>
 
@@ -43,7 +43,7 @@
         {% for i in range(1,3) %}
         <section id="section{{loop.index}}">
             {% if i == 1%}
-            <a href="#section{{loop.index +1}}">‹</a>
+            <a>‹</a>
             {% for j in range(4) %}
             <div class="item">
                 <span hidden></span>
@@ -51,9 +51,9 @@
 
             </div>
             {% endfor %}
-            <a href="#section{{loop.index +1}}">›</a>
+            <a>›</a>
             {% else %}
-            <a href="#section{{loop.index -1}}">‹</a>
+            <a>‹</a>
             {% for j in range(3) %}
             <div class="item">
                 <span hidden></span>
@@ -61,7 +61,7 @@
 
             </div>
             {% endfor %}
-            <a href="#section{{ loop.index -1}}">›</a>
+            <a>›</a>
             {% endif %}
         </section>
 
@@ -78,23 +78,23 @@
         {% for i in range(1,3) %}
         <section id="crimesection{{loop.index}}">
             {% if i == 1%}
-            <a href="#crimesection{{loop.index +1}}">‹</a>
+            <a>‹</a>
             {% for j in range(4) %}
             <div class="item">
                 <span hidden></span>
                 <img src="">
             </div>
             {% endfor %}
-            <a href="#crimesection{{loop.index +1}}">›</a>
+            <a>›</a>
             {% else %}
-            <a href="#crimesection{{loop.index -1}}">‹</a>
+            <a>‹</a>
             {% for j in range(3) %}
             <div class="item">
                 <span hidden></span>
                 <img src="">
             </div>
             {% endfor %}
-            <a href="#crimesection{{loop.index -1}}">›</a>
+            <a>›</a>
             {% endif %}
         </section>
 
@@ -108,23 +108,23 @@
         {% for i in range(1,3) %}
         <section id="actionsection{{loop.index}}">
             {% if i == 1%}
-            <a href="#actionsection{{loop.index +1}}">‹</a>
+            <a>‹</a>
             {% for j in range(4) %}
             <div class="item">
                 <span hidden></span>
                 <img src="">
             </div>
             {% endfor %}
-            <a href="#actionsection{{loop.index +1}}">›</a>
+            <a>›</a>
             {% else %}
-            <a href="#actionsection{{loop.index -1}}">‹</a>
+            <a>‹</a>
             {% for j in range(3) %}
             <div class="item">
                 <span hidden></span>
                 <img src="">
             </div>
             {% endfor %}
-            <a href="#actionsection{{loop.index -1}}">›</a>
+            <a>›</a>
             {% endif %}
         </section>
 
@@ -138,23 +138,23 @@
         {% for i in range(1,3) %}
         <section id="dramasection{{loop.index}}">
             {% if i == 1%}
-            <a href="#dramasection{{loop.index +1}}">‹</a>
+            <a>‹</a>
             {% for j in range(4) %}
             <div class="item">
                 <span hidden></span>
                 <img src="">
             </div>
             {% endfor %}
-            <a href="#dramasection{{loop.index +1}}">›</a>
+            <a>›</a>
             {% else %}
-            <a href="#dramasection{{loop.index -1}}">‹</a>
+            <a>‹</a>
             {% for j in range(3) %}
             <div class="item">
                 <span hidden></span>
                 <img src="">
             </div>
             {% endfor %}
-            <a href="#dramasection{{loop.index -1}}">›</a>
+            <a>›</a>
             {% endif %}
         </section>
 

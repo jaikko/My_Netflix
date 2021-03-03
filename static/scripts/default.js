@@ -278,41 +278,33 @@ displayCrimeMovies()
 displayActionMovies()
 displayDramaMovies()
 
-// Contrôler href
+// Slider
 var a = document.querySelectorAll(".wrapper a");
-
 for (var i = 0; i < a.length; i++) {
        a[i].addEventListener('click',function(e){
-        event.preventDefault();
-        console.log("click");
         id = e.target.parentNode.id;
+        el = document.getElementById(id);
+        id2 = el.closest("section").parentNode.closest("section").id;
+
         if (id.substr(id.length - 1) == "1"){
         txt = id.slice(0, -1) +"2";
-        alert("1");
-        pos = document.getElementById(txt).offsetTop;
-        window.scrollTo({ top: pos -68, behavior: 'smooth' });
+        elmnt = document.getElementById(id2);
+        elmnt1 = document.getElementById(txt);
+
+        elmnt1.scrollIntoView();
+        elmnt.scrollIntoView();
+
         }
         if (id.substr(id.length - 1) == "2"){
         txt = id.slice(0, -1) +"1";
-        alert("2");
-        pos = document.getElementById(txt).offsetTop;
-        window.scrollTo({ top: pos -68, behavior: 'smooth' });
+        elmnt = document.getElementById(id2);
+        elmnt1 = document.getElementById(txt);
+        document.querySelector(".wrapper").style.gridTemplateColumns = "repeat(3 auto)";
+        elmnt1.scrollIntoView();
+        elmnt.scrollIntoView();
+
+
         }
-
-//         if (id == "section1"){
-//            alert("ok1");
-//             setTimeout(function () {
-//            window.scrollTo(0, 300);
-//        },5);
-//        }
-//
-//        if (id == "section2"){
-//            alert("ok2");
-//           setTimeout(function () {
-//
-//        },5);
-//        }
-
 
         });
     }
@@ -374,8 +366,15 @@ function Modal(id){
         else{
             document.getElementById('p_origine').textContent = info.countries[0];
         }
+        if (info.worldwide_gross_income == null || info.budget_currency == null ){
+        //Ajouter résultat box office au modal
+        document.getElementById('p_box').textContent = "unknown" ;
+        }
+        else{
         //Ajouter résultat box office au modal
         document.getElementById('p_box').textContent = info.worldwide_gross_income +" "+info.budget_currency ;
+        }
+
         //Ajouter résumé au modal
         document.getElementById('p_resume').textContent = info.long_description;
 
