@@ -11,6 +11,7 @@ Pour installer les dépendances:
 5. Exécuter la commande "virtualenv -p python3 venv". venv est le nom de dossier.
 6. Dans la racine du dossier du projet, éxecuter la commande "source venv/Scripts/activate"
 7. Lancez la commande "python -m pip install -r requirements.txt"
+8. Pour terminer, exécuter "python manage.py runserver"
 
 Vous devez activer l'environnement virtuel ( voir .6 au-dessus) pour l'étape ci-dessous.
 
