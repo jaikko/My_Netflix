@@ -299,7 +299,6 @@ for (var i = 0; i < a.length; i++) {
         txt = id.slice(0, -1) +"1";
         elmnt = document.getElementById(id2);
         elmnt1 = document.getElementById(txt);
-        document.querySelector(".wrapper").style.gridTemplateColumns = "repeat(3 auto)";
         elmnt1.scrollIntoView();
         elmnt.scrollIntoView();
 
