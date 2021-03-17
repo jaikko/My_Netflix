@@ -54,7 +54,6 @@ fetch('http://localhost:8000/api/v1/titles/?year=&min_year=&max_year=&imdb_score
 	// Store the post data to a variable
 	post = data;
 	next = data.next;
-	console.log("next" + next)
 	films = data.results;
 	delete films[0];
 	let img = document.querySelectorAll('#best-note #section1 img');
@@ -79,8 +78,6 @@ fetch('http://localhost:8000/api/v1/titles/?year=&min_year=&max_year=&imdb_score
 }).then(function (filmData) {
 
     films = filmData.results;
-    console.log("films");
-    console.log(films);
     let img = document.querySelectorAll('#best-note #section2 img');
     let span = document.querySelectorAll('#best-note  #section2 span');
     for(var i= 0; i < 3; i++)
@@ -168,7 +165,6 @@ fetch('http://localhost:8000/api/v1/titles/?year=&min_year=&max_year=&imdb_score
 	post = data;
 	next = data.next;
 	films = data.results;
-	console.log(films);
 	let img = document.querySelectorAll('#action #actionsection1 img');
 	let span = document.querySelectorAll('#action  #actionsection1 span');
 	last_image = films[4].image_url;
